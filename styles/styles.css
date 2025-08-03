@@ -99,8 +99,17 @@ section {
   color: var(--light);
 }
 
+/* statistics */
+
 #statistics .description {
+  max-width: 50rem;
   color: var(--secondary-text);
+}
+
+#statistics .text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .image-lines {
@@ -111,6 +120,7 @@ section {
 }
 
 .image-lines img {
+  display: none;
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -129,8 +139,47 @@ section {
   border-bottom: 0px;
 }
 
-#statistics .description p:first-child {
+#contact {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid black;
+}
+
+#contact-form input:focus {
+  outline: transparent;
+  border: 1px solid var(--secondary-text);
+}
+
+form {
+  width: 35rem;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+#contact #contact-form button {
+  display: block;
+  margin-top: 0.7rem;
+}
+
+#contact-form .error {
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+  color: red;
+  margin-top: -12px;
+}
+
 @media screen and (min-width: 768px) {
   .buttons-container {
     flex-direction: row;
@@ -138,5 +187,16 @@ section {
 
   .heading {
     font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .image-lines img {
+    display: inline;
+  }
+
+  #statistics {
+    display: flex;
+    justify-content: center;
   }
 }
